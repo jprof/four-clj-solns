@@ -2,6 +2,8 @@
   (:require [clojure.test :refer :all]
             [four-clj-solns.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest prob-30-tests
+  (testing "Problem 30 - Compress a Sequence"
+    (= (compress-seq [1 1 2 3 3 2 2 3]) '(1 2 3 2 3))
+    (= (apply str (compress-seq "Leeeeeeerroyyy")) "Leroy")
+    (= (compress-seq [[1 2] [1 2] [3 4] [1 2]]))))
