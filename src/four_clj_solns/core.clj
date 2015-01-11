@@ -16,6 +16,12 @@
             (rest remaining))
           (reverse coll))))))
 
+;; Problem #46 - Flipping out
+(def flip-out
+  (fn [to-flip]
+    (fn [& args]
+      (apply to-flip (reverse args)))))
+
 
 (defn -main
   "I don't do a whole lot ... yet."
