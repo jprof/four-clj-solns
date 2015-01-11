@@ -1,36 +1,10 @@
 # four-clj-solns
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar four-clj-solns-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+A collection of solutions to the 4clojure.net problems.
 
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Justin Proffitt
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
