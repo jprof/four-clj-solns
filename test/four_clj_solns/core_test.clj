@@ -4,13 +4,21 @@
 
 (deftest prob-30-tests
   (testing "Problem 30 - Compress a Sequence"
-    (= (compress-seq [1 1 2 3 3 2 2 3]) '(1 2 3 2 3))
-    (= (apply str (compress-seq "Leeeeeeerroyyy")) "Leroy")
-    (= (compress-seq [[1 2] [1 2] [3 4] [1 2]]))))
+    (is (= (compress-seq [1 1 2 3 3 2 2 3]) '(1 2 3 2 3)))
+    (is (= (apply str (compress-seq "Leeeeeeerroyyy")) "Leroy"))
+    (is (= (compress-seq [[1 2] [1 2] [3 4] [1 2]])))))
 
 (deftest prob-46-tests
   (testing "Problem 46 - Flipping out"
-    (= 3 ((flip-out nth) 2 [1 2 3 4 5]))
-    (= true ((flip-out >) 7 8))
-    (= 4 ((flip-out quot) 2 8))
-    (= [1 2 3] ((flip-out take) [1 2 3 4 5] 3))))
+    (is (= 3 ((flip-out nth) 2 [1 2 3 4 5])))
+    (is (= true ((flip-out >) 7 8)))
+    (is (= 4 ((flip-out quot) 2 8)))
+    (is (= [1 2 3] ((flip-out take) [1 2 3 4 5] 3)))))
+
+(deftest prob-92-tests
+  (testing "Problem 92 - Read Roman Numerals"
+    (is (= 14   (read-roman-nums "XIV")))
+    (is (= 827  (read-roman-nums "DCCCXXVII")))
+    (is (= 3999 (read-roman-nums "MMMCMXCIX")))
+    (is (= 48   (read-roman-nums "XLVIII"))))
+  )
