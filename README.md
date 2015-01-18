@@ -1,6 +1,6 @@
 # four-clj-solns
 
-A collection of solutions to the 4clojure.net problems.
+A collection of solutions to problems from http://www.4clojure.com
 
 ## License
 
