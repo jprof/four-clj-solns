@@ -42,6 +42,10 @@
                     (clojure.string/replace #"CM" "DCCCC"))]
       (reduce #(+ %1 %2) (map #(get NUMS %) new-s)))))
 
+;;Problem #93 - Partially flatten a sequence
+(def part-flatten-seq
+  (fn [coll]))
+
 ;; Problem #105 - Identify keys and values
 (def id-keys-and-values
   (fn [coll]
