@@ -22,3 +22,10 @@
     (is (= 3999 (read-roman-nums "MMMCMXCIX")))
     (is (= 48   (read-roman-nums "XLVIII"))))
   )
+
+(deftest prob-105-tests
+  (testing "Problem 92 - Identify keys and values"
+    (is (= (id-keys-and-values [:a 1])      {:a [1]}))
+    (is (= (id-keys-and-values [:a 1 :b 2]) {:a [1] :b [2]}))
+    (is (= (id-keys-and-values [:a 1 2 3 :b :c 4]) {:a [1 2 3] :b [] :c [4]}))
+    (is (= (id-keys-and-values []) {}))))

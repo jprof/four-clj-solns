@@ -42,6 +42,26 @@
                     (clojure.string/replace #"CM" "DCCCC"))]
       (reduce #(+ %1 %2) (map #(get NUMS %) new-s)))))
 
+;; Problem #105 - Identify keys and values
+(def id-keys-and-values
+  (fn [coll]
+    (loop [fmap {}
+           curr-key (first coll)
+           curr-vals []
+           rcoll (rest coll)]
+      (let [item (first rcoll)]
+        (cond
+          (nil? curr-key) {} ;; Empty coll passed
+          (keyword? item) (recur (assoc fmap curr-key curr-vals)
+                                 item
+                                 []
+                                 (rest rcoll))
+          (number? item)  (recur fmap
+                                 curr-key
+                                 (conj curr-vals item)
+                                 (rest rcoll))
+          (nil? item) (assoc fmap curr-key curr-vals))))))
+
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
