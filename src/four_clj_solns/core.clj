@@ -44,7 +44,9 @@
 
 ;;Problem #93 - Partially flatten a sequence
 (def part-flatten-seq
-  (fn [coll]))
+  (fn [coll]
+    (for [c coll]
+      (flatten c))))
 
 ;; Problem #105 - Identify keys and values
 (def id-keys-and-values
