@@ -27,7 +27,7 @@
   (testing "Problem 93 - Partially flatten a sequence"
     (is (= (part-flatten-seq [["Do"] ["Nothing"]]) [["Do"] ["Nothing"]]))
     (is (= (part-flatten-seq [[[:a :b]] [[:c :d]] [:e :f]]) [[:a :b] [:c :d] [:e :f]]))
-    (is (= (part-flatten-seq '((1 2) ((3 4) (((((5 6)))))))) '((1 2) (3 4) (5 6))))
+    (is (= (part-flatten-seq '((1 2) ((3 4)) (((((5 6))))))) '((1 2) (3 4) (5 6))))
     (is (= (part-flatten-seq '((1 2) ((3 4) ((((5 6)))))))   '((1 2) (3 4) (5 6))))
     (is (= (part-flatten-seq []) [])))
   )

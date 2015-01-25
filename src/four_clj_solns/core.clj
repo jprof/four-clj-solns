@@ -45,8 +45,8 @@
 ;;Problem #93 - Partially flatten a sequence
 (def part-flatten-seq
   (fn [coll]
-    (for [c coll]
-      (flatten c))))
+    (filter #(when (sequential? %) (not (sequential? (first %))))
+            (tree-seq sequential? seq coll))))
 
 ;; Problem #105 - Identify keys and values
 (def id-keys-and-values
